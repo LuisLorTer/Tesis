@@ -1,0 +1,17 @@
+[PROJECT]
+Target=SerieParalelo.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.076
+Compiler=PCH
+[Target Data]
+FileList=SerieParalelo.c
+[SerieParalelo.c]
+Type=4
+[mru-list]
+1=SerieParalelo.c
+[Units]
+Count=1
+1=SerieParalelo (main)
+
+[defines]
+buildcount=1

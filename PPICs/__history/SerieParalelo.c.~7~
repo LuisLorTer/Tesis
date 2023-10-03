@@ -91,7 +91,6 @@ int main()
                return 1;    
             
          }
-      }
   /*    set_tris_b(0);              //Programa de prueba
       set_tris_d(0);
       int8 dato1 = 0;
@@ -118,7 +117,8 @@ int main()
    return 0;
 }
 
-void put_address(void){
+void put_address()
+{
    set_tris_b(0x00);
    set_tris_d(0x00);
    output_b(dir_l);

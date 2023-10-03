@@ -23,7 +23,18 @@ int8 dir_h;
 int8 data_l;
 int8 data_h;
 
-void put_address(void);
+void put_address(void){
+   set_tris_b(0x00);
+   set_tris_d(0x00);
+   output_b(dir_l);
+   output_d(dir_h);
+   //dudas con señales DA0,DA1 y DA2
+   output_low (WR);
+   delay_ms(10);
+   /*output_low (DA1);
+   output_low (DA0);
+   output_high (DA1);*/
+}
 
 int main()
 {     
@@ -91,7 +102,6 @@ int main()
                return 1;    
             
          }
-      }
   /*    set_tris_b(0);              //Programa de prueba
       set_tris_d(0);
       int8 dato1 = 0;
@@ -118,15 +128,4 @@ int main()
    return 0;
 }
 
-void put_address(void){
-   set_tris_b(0x00);
-   set_tris_d(0x00);
-   output_b(dir_l);
-   output_d(dir_h);
-   //dudas con señales DA0,DA1 y DA2
-   output_low (WR);
-   delay_ms(10);
-   /*output_low (DA1);
-   output_low (DA0);
-   output_high (DA1);*/
-}
+
